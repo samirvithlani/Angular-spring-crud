@@ -1,0 +1,26 @@
+<div *ngIf ="students">
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>AGE</th>
+        <th>CONTACT</th>
+        <th>ACTION</th>
+    </tr>
+    <tr *ngFor ="let s of students">
+        <td>{{s.sName}}</td>
+        <td>{{s.sEmail}}</td>
+        <td>{{s.sAge}}</td>
+        <td>{{s.sPhone}}</td>
+        <td>
+            <button (click) = "deleteStudent(s.sId)">DELETE</button>
+        </td>
+        <td>
+            <a [routerLink]="['/updatestudent',s.sId]">EDIT</a>
+        </td>
+    </tr>
+</table>
+</div>
+<span *ngIf ="!students">
+    <h1>No records found...</h1>
+</span>

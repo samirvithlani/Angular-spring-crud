@@ -1,0 +1,27 @@
+<form [formGroup]="studentGroup" (submit)="updateStudent()">
+
+    <div>
+        <label>Name</label>
+        <input type="text" formControlName="sName" [(ngModel)]="student.sName">
+    </div>
+    <div>
+        <label>Age</label>
+        <input type="text" formControlName="sAge"[(ngModel)]="student.sAge">
+    </div>
+    <div>
+        <label>email</label>
+        <input type="text" formControlName="sEmail" [(ngModel)]="student.sEmail">
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="text" formControlName="sPassword" [(ngModel)]="student.sPassword">
+    </div>
+    <div>
+        <label>Phone</label>
+        <input type="text" formControlName="sPhone" [(ngModel)]="student.sPhone">
+    </div>
+    <div>
+        
+        <input type="submit" value="Add Student">
+    </div>
+</form>
